@@ -1,6 +1,10 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
+gem 'bourbon'
+
+# use twitter's bootstrap templates
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

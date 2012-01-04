@@ -1,0 +1,44 @@
+$text-color: rgb(238, 238, 238);
+$link-color: rgb(085, 127, 149);
+
+$button-gradient-top: rgb(216, 128, 032);
+$button-gradient-bottom: rgb(146, 062, 015);
+
+body {
+ background-image: image-url('background.png');
+ font-size: 12px;
+ font-family: $helvetica;
+ color: $text-color; 
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  };
+}
