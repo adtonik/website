@@ -1,8 +1,37 @@
-// Place all the styles related to the homepage controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.action-homepage-index {
+  .hero-unit {
+    background: inherit;
+    text-align: center;
+  }
 
-.hero-unit {
-  background: inherit;
-  text-align: center;
+  .logo-spotlights {
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  .spotlights {
+    position: absolute;
+    top: -80px;
+    right: 170px;
+    z-index: -1;
+  }
+
+  .radial-light {
+    position: absolute;
+    top: -60px;
+    right: 100px;
+    z-index: -1;
+  }
+
+  h2 {
+    color: #ddd;
+    font-weight: normal;
+    font-family: QuicksandBook, $helvetica;
+    font-size: 30px;
+    text-shadow: 0px 1px 1px #111;
+  }
+
+  .tv-message {
+    padding-top: 25px;
+  }
 }
