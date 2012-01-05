@@ -4,11 +4,20 @@ $link-color: rgb(085, 127, 149);
 $button-gradient-top: rgb(216, 128, 032);
 $button-gradient-bottom: rgb(146, 062, 015);
 
+body, html {
+  height: 100%;
+  min-height: 1248px;
+  min-width: 960px;
+}
+
 body {
- background-image: image-url('background.png');
- font-size: 12px;
- font-family: $helvetica;
- color: $text-color; 
+  background: image-url('bubbles-right-2.png') no-repeat bottom right,
+              image-url('bubbles-left-2.png') no-repeat bottom left,
+              image-url('background.png') center center repeat;
+
+  font-size: 12px;
+  font-family: $helvetica;
+  color: $text-color;
 }
 
 a {

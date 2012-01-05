@@ -1,7 +1,9 @@
 .action-homepage-index {
+  
   .hero-unit {
     background: inherit;
     text-align: center;
+    padding-bottom: 0px;
   }
 
   .logo-spotlights {
@@ -23,15 +25,81 @@
     z-index: -1;
   }
 
-  h2 {
+  h1, h2 {
     color: #ddd;
     font-weight: normal;
     font-family: QuicksandBook, $helvetica;
-    font-size: 30px;
     text-shadow: 0px 1px 1px #111;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 50px;
   }
 
   .tv-message {
     padding-top: 25px;
+  }
+
+  .hr {
+    text-align: center;
+  }
+
+  .content {
+    padding-top: 35px;
+    text-align: center;
+
+    h1 {
+      padding-bottom: 50px;
+    }
+
+    .contact-info {
+      text-shadow: 0px 1px 1px #111;      
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+      }
+
+      .twitter-user {
+        font-family: Arial, $helvetica;
+        font-size: 24px;
+        color: #557e96;
+      }
+    }
+
+    .quote {
+      text-align: left;
+
+      p {
+        padding-top: 10px;
+        font-family: Georgia;
+        font-style: italic;
+        font-size: 16px;
+        color: #cbcbcb;
+        width: 80%;
+        display: block;
+      }
+
+      .quoted {
+        font-family: Arial, $helvetica;
+        font-size: 12px;
+        color: #557e96;
+        display: block;
+        float: right;
+
+        .name {
+          display: block;
+        }
+      }
+
+      img {
+        display: block;
+      }
+    }
   }
 }
