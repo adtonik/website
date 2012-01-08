@@ -69,8 +69,7 @@
     <h3>Curious about the future of TV?</h3>
   </div>
 
-  <form action="/email_submit" method="post">      
-
+  <%= form_for :email, :url => email_submit_path, :remote => true do |f| %>
     <div class='modal-body'>
       <fieldset>
         <label for='email_address'>Email Address</label>
@@ -83,5 +82,5 @@
     <div class='modal-footer'>
       <input type='submit' class='btn secondary' value='Submit'>
     </div>
-  </form>
+  <% end %>
 </div>
