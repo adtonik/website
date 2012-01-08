@@ -407,6 +407,19 @@ button.shiny-blue {
   @include shiny-blue;
 }
 
+button.shiny-orange {
+  @include shiny-blue;
+
+//  @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
+  @include linear-gradient(top, #d98210 0%, #933f07 80%);
+  @include border-radius(5px);
+
+  border: 0;
+  text-shadow: 0 1px 1px #d28728;
+  @include box-shadow(inset 0px -5px 0px 0px #242424);
+  
+}
+
 /* download itunes
    I wrote a blog post about creating this button:
    http://robots.thoughtbot.com/post/2718077289/make-css3-buttons-like-a-boss
