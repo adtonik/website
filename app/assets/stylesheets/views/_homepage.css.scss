@@ -1,5 +1,5 @@
 .action-homepage-index {
-  
+
   .hero-unit {
     background: inherit;
     text-align: center;
@@ -55,30 +55,46 @@
     h1 {
       padding-bottom: 50px;
     }
-    
+
     .row {
-      padding-bottom: 10px;      
+      padding-bottom: 10px;
     }
 
     .contact-info {
-      text-shadow: 0px 1px 1px #111;      
 
+      // generalize this later...
       button {
-        font-weight: 500;
+        $color: #eee;
+        $background-color: #f37620;
+        
+        @include awesome-button($background-color, $color);
+        @include linear-gradient(top, #f39555, $background-color);
+        @include border-radius(5px);
+        color: $color;
+        background-color: $background-color;
+        padding: 5px 8px 6px !important;
+        width: 100px;
+        font-weight: bold;
+        
         margin-top: 35px;
-        font-size: 24px;
-        width: 190px;
-        height: 50px;
+        font-size: 20px;
+        width: 160px;
+        height: 40px;
       }
 
       .twitter-user {
         font-size: 24px;
         color: #557e96;
         display: block;
+        text-shadow: 0px 1px 1px #111;
       }
     }
 
-    .quote {
+    .quote-image {
+      text-align: left;
+    }
+    
+    .quotes {
       text-align: left;
 
       p {
@@ -102,5 +118,5 @@
         }
       }
     }
-  }  
+  }
 }

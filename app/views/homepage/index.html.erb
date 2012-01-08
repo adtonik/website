@@ -18,46 +18,53 @@
   <h1>Curious about the Future of TV?</h1>
 
   <div class='row'>
-    <div class='span-one-third quote'>
+    <div class='span-one-third quote-image'>
       <%= image_tag 'quote.png' %>
     </div>
 
-    <div class='span-one-third contact-info'>
+    <div class='span-one-third'>
       <%= image_tag "twitter.png" %>
     </div>
 
-    <div class='span-one-third quote'>
+    <div class='span-one-third quote-image'>
       <%= image_tag 'quote.png' %>
     </div>
 
   </div>
 
   <div class='row'>
-    <div class='span-one-third quote'>
-      <p>This is a quote from someone Awesome in charge!</p>
+    <div class='span-one-third'>
+      <ul class='quotes'>
+        <% @left_quotes.each do |quote| %>
+        <li>
+          <p><%= quote[:quote] %></p>
 
-      <div class='quoted'>
-        <span class='name'>Max Adington</span>
-        CEO, AdBiz, Inc.
-      </div>
-      <span style='clearfix'></span>
+          <div class='quoted'>
+            <%= quote[:author] %>
+          </div>          
+        </li>
+        <% end %>
+      </ul>
     </div>
 
     <div class='span-one-third contact-info'>
       <span class='twitter-user'><%= link_to "@AdTonik", "http://twitter.com/adtonik"%></span>
 
-      <button class='shiny-orange' data-controls-modal="email-modal" data-keyboard="true" data-backdrop="true">CONTACT US</button>
+      <button class='orange button' data-controls-modal="email-modal" data-keyboard="true" data-backdrop="true">Contact Us</button>
     </div>
 
-    <div class='span-one-third quote'>
-      <p>A second quote that might be just a little longer and drop down three lines!</p>
+    <div class='span-one-third'>
+      <ul class='quotes'>
+        <% @right_quotes.each do |quote| %>
+        <li>
+          <p><%= quote[:quote] %></p>
 
-      <div class='quoted'>
-        <span class='name'>Tim Adington</span>
-        AdBiz, Inc.
-      </div>
-      <span style='clearfix'></span>
-
+          <div class='quoted'>
+            <%= quote[:author] %>
+          </div>          
+        </li>
+        <% end %>
+      </ul>      
     </div>
   </div>
 </div>
@@ -84,3 +91,11 @@
     </div>
   <% end %>
 </div>
+
+<script>
+
+$(function() {  
+  $('ul.quotes').quote_rotator({randomize_first_quote: true});
+});
+
+</script>
