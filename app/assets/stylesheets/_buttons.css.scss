@@ -410,15 +410,52 @@ button.shiny-blue {
 button.shiny-orange {
   @include shiny-blue;
 
-//  @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
-  @include linear-gradient(top, #d98210 0%, #933f07 80%);
+  @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
   @include border-radius(5px);
 
-  border: 0;
+  background-color: #D98210;
+  color: #592706;
+  border: 1px solid #383838;
   text-shadow: 0 1px 1px #d28728;
+  
   @include box-shadow(inset 0px -5px 0px 0px #242424);
   
+  &:hover {
+    @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
+    cursor: pointer;
+  }
+
+  &:active {
+    border: 1px solid #383838;
+    @include box-shadow(inset 0px -5px 0px 0px #242424);
+    @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
+  }  
 }
+
+.shiny-orange {
+  @include shiny-blue;
+
+  @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
+  @include border-radius(5px);
+
+  background-color: #D98210;
+  color: #592706;
+  border: 1px solid #383838;
+  text-shadow: 0 1px 1px #d28728;
+  
+  @include box-shadow(inset 0px -5px 0px 0px #242424);
+  
+  &:hover {
+    @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
+    cursor: pointer;
+  }
+
+  &:active {
+    @include box-shadow(inset 0px -5px 0px 0px #242424);
+    @include linear-gradient(top, #d98210 0%, #dda05e 50%, #e37204 50%, #933f07 100%);
+  }  
+}
+
 
 /* download itunes
    I wrote a blog post about creating this button:

@@ -8,9 +8,6 @@
 
   <h2>TV Advertising for the connected experience</h2>
 
-  <div class='tv-message'>
-    <%= image_tag "tv.png", class: 'tv' %>
-  </div>
 </div>
 
 <div class='hr'>
@@ -47,9 +44,9 @@
     </div>
 
     <div class='span-one-third contact-info'>
-      <span class='twitter-user'>@AdTonik</span>
+      <span class='twitter-user'><%= link_to "@AdTonik", "http://twitter.com/adtonik"%></span>
 
-      <button class='shiny-orange' data-action='slidedown'>CONTACT US</button>
+      <button class='shiny-orange' data-controls-modal="email-modal" data-keyboard="true" data-backdrop="true">CONTACT US</button>
     </div>
 
     <div class='span-one-third quote'>
@@ -63,4 +60,28 @@
 
     </div>
   </div>
+</div>
+
+<div id='email-modal' class='modal hide fade in' style='display: none'>
+
+  <div class='modal-header'>
+    <a href='#' class='close'>×</a>
+    <h3>Curious about the future of TV?</h3>
+  </div>
+
+  <form action="/email_submit" method="post">      
+
+    <div class='modal-body'>
+      <fieldset>
+        <label for='email_address'>Email Address</label>
+        <div class='input'>
+          <input class='xlarge' id='email_address' name='email_address' size='30' type='text'>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class='modal-footer'>
+      <input type='submit' class='btn secondary' value='Submit'>
+    </div>
+  </form>
 </div>

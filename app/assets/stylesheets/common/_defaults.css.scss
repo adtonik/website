@@ -1,5 +1,6 @@
 $text-color: #eeeeee;
-$link-color: rgb(085, 127, 149);
+$link-color: #557e96;
+//$link-color: rgb(085, 127, 149);
 
 $button-gradient-top: rgb(216, 128, 032);
 $button-gradient-bottom: rgb(146, 062, 015);
@@ -21,8 +22,11 @@ body {
 }
 
 a {
-  color: $link-color;
   text-decoration: none;
+
+  &, &:hover, &:active {
+    color: $link-color;    
+  }
 }
 
 li {
