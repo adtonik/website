@@ -1,2 +1,2 @@
-rvm use 1.9.2@adtonik --create
+rvm use 1.9.3@website --create
 export PATH=./bin:$PATH

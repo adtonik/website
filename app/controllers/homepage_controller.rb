@@ -1,11 +1,10 @@
 class HomepageController < ApplicationController
   def index
-    
     @quotes = QUOTES.map do |q|
       quote, author = q.split("--")
       { quote: quote.strip, author: author.strip }
     end
-    
+  
     @left_quotes, @right_quotes = @quotes.each_slice(QUOTES.size / 2).to_a
   end
 
